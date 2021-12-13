@@ -1,9 +1,14 @@
+nav{
+  height: 20px;
+  margin: 0 auto;
+  background-color: blueviolet;
+}
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
