@@ -1,9 +1,10 @@
 import React from "react"
 
-export default function Main(){
+export default function Main(props){
     return(
-        <main className = "">
-            <span><h1 className = "main-title"> </h1></span>
+        <main className = {props.darkMode ? "dark": ""}>
+            <span className="watermark"></span>
+            <h1 className = "main-title"> </h1>
 
             <ul className="main--facts">
             

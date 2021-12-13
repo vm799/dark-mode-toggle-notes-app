@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffff;
+  
   
 }
 
@@ -22,14 +22,16 @@ code {
 nav{
   height: 80px;
   margin: 0 auto;
-  background-color:#ffff;
+ 
   display: flex;
-
   align-items: center;
   padding: 0.5em;
   box-shadow: 0px 0px 20px rgba(0,0,0, 0.25);
   font-size: 1.5rem;
-  color:rgb(22, 211, 232);
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ;
 }
 .toggler{
   display:flex;
@@ -39,16 +41,21 @@ nav{
 
 nav > h3{
   margin-left: 20px;
+  font-weight:300;
 }
 
 .toggler > p{
   font-size: 0.65em;
-  color:grey;
+  color:white;
   font-weight: 800;
 }
 main{
-  padding: 4em;
-  margin-left: 4em;
+  padding: 4em 6em 0em;
+  
+  background-color: off-white;
+  
+  height: 100vh;
+  width: 100%;
 }
 
 ul {
@@ -57,33 +64,35 @@ ul {
   margin-top: 1em;
 }
 
+li{
+  padding: 0.5em;
+}
 li::marker{
-  font-size: 1.4rem;
+  font-size: 2rem;
     color: #61DAFB;
 }
 
-span::after{
+.watermark {
+  content: "REACT";
 margin-top: 1em;
 font-weight: 900;
-content: "REACT";
-color: #c4c2ce;
+color: #61DAFB;
 position: absolute;
 z-index: -1;
-right: 10%;
-top: 0%;
+right:10%;
+top: 8%;
 font-size: 3.5em;
 padding: 1em 0em 2em 0em;
 writing-mode: vertical-lr;
 text-orientation: upright;
-background-color: rgba(22, 211, 232, 0.201);
+/* background-color: rgba(22, 211, 232, 0.201); */
 transform:scaleX(2);
 height: 40%;
+letter-spacing: 0px;
 
 }
 
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   pointer-events: none;
@@ -108,3 +117,53 @@ height: 40%;
   }
 }
 
+.toggler{
+  display: flex;
+  align-items: center;
+  
+}
+.toggler--slider{
+width: 45px;
+height: 25px;
+background-color: #2B283A;
+border-radius: 2em;
+margin-inline: 10px;
+border: 2px solid white;
+box-sizing:content-box;
+display: flex;
+justify-content: flex-start;
+}
+
+.toggler--slider--circle{
+  height:25px;
+  width:25px;
+  border-radius: 50%;
+  background-color: #61DAFB;
+} 
+
+nav.dark p {
+  color: #61DAFB;
+  background-color: ;
+}
+
+nav.dark{
+  background-color: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ;
+  color: white;
+}
+
+nav.dark .toggler--slider {
+  border-color: #61DAFB;
+  background-color: grey;
+}
+
+nav.dark .toggler--slider{
+justify-content: flex-end;
+}
+
+main.dark {
+  background-color: #282D35;
+    color: white;
+}
